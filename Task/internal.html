@@ -5,12 +5,156 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L8,240C16,192,32,96,48,48C64,0,80,0,96,10.7C112,21,128,43,144,80C160,117,176,171,192,208C208,245,224,267,240,261.3C256,256,272,224,288,202.7C304,181,320,171,336,160C352,149,368,139,384,112C400,85,416,43,432,58.7C448,75,464,149,480,181.3C496,213,512,203,528,186.7C544,171,560,149,576,117.3C592,85,608,43,624,74.7C640,107,656,213,672,266.7C688,320,704,320,720,309.3C736,299,752,277,768,266.7C784,256,800,256,816,256C832,256,848,256,864,261.3C880,267,896,277,912,240C928,203,944,117,960,80C976,43,992,53,1008,74.7C1024,96,1040,128,1056,133.3C1072,139,1088,117,1104,144C1120,171,1136,245,1152,261.3C1168,277,1184,235,1200,208C1216,181,1232,171,1248,165.3C1264,160,1280,160,1296,138.7C1312,117,1328,75,1344,53.3C1360,32,1376,32,1392,48C1408,64,1424,96,1432,112L1440,128L1440,320L1432,320C1424,320,1408,320,1392,320C1376,320,1360,320,1344,320C1328,320,1312,320,1296,320C1280,320,1264,320,1248,320C1232,320,1216,320,1200,320C1184,320,1168,320,1152,320C1136,320,1120,320,1104,320C1088,320,1072,320,1056,320C1040,320,1024,320,1008,320C992,320,976,320,960,320C944,320,928,320,912,320C896,320,880,320,864,320C848,320,832,320,816,320C800,320,784,320,768,320C752,320,736,320,720,320C704,320,688,320,672,320C656,320,640,320,624,320C608,320,592,320,576,320C560,320,544,320,528,320C512,320,496,320,480,320C464,320,448,320,432,320C416,320,400,320,384,320C368,320,352,320,336,320C320,320,304,320,288,320C272,320,256,320,240,320C224,320,208,320,192,320C176,320,160,320,144,320C128,320,112,320,96,320C80,320,64,320,48,320C32,320,16,320,8,320L0,320Z"></path></svg>
+<style>
+    *{box-sizing: border-box;}
+    .card
+    {
+        height: 500px;
+        width: 230px;
+        background: white;
+        position: relative;
+        margin: 100px auto;
+        box-shadow:0 0 25px #000 ;
+    }
+    .image
+    {
+        height: 350px;
+        width: 230px;
+       /* margin-left: 80%; */
 
-
-   <img src="file:///C:/Users/jigar/Downloads/wave.svg" alt="">
+        /* background:url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg); */
+        /* background-size: 100% 100%; */
     
+    }
+    b
+    {
+        background: orangered;
+        position: absolute;
+        top: 0px;
+        left: 196px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        z-index: 1;
+    }
+    
+    .front 
+    {
+        height: 350px;
+        width: 230px;
+        
+        position: absolute;
+        top:0;
+        left:0;
+        transition: 1s;
+        backface-visibility: hidden;
+        padding: 25px;
+        
+
+        transform: rotateY(0deg);
+    }
+
+    .back 
+    {
+        height: 350px;
+        width: 230px;
+        background:rgba(138, 134, 134,0.4);
+        position: absolute;
+        top:0;
+        left:0;
+        transition: 1s;
+        backface-visibility: hidden;
+        padding: 25px;
+
+        transform: rotateY(180deg);
+    }
+
+    .image:hover .front
+    {
+        transform: rotateY(180deg);
+    }
+
+    .image:hover .back
+    {
+        transform: rotateY(0deg);
+    }
+    .view
+    {
+     height: 50px;
+    width: 230px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    opacity: 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    }
+    .image:hover .view
+    {
+        margin-top: 300px;
+        opacity: 1;
+    }
+    .view:hover
+    {
+       background-color: blue;
+    }
+    .info
+    {
+        height: 150px;
+        width: 230px;
+        background-color: white;
+        font-size: 20px;
+        text-align: center;
+        padding: 10%;
+        color: palevioletred;
+        
+        
+    }
+    .select
+    {
+        height: 30px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        color: white;
+        outline: 5px solid transparent;
+        outline-offset: 0px;
+        transition: .30s;
+        margin: 30px auto;
+    }   
+    .select:hover
+    {
+        outline: 5px solid aquamarine;
+        outline-offset: 5px;
+    }
+    
+</style>
+<body>
+    <div class="card"><b>new</b>
+    <div class="image">
+        <div class="front">
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+
+        <div class="back">
+
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+        <div class="view">Quick view</div>
+</div>
+    <div class="info">Formal Blue Shirt
+       <span style="color: black;">$45.99</span>
+       <del style="color: gray;">$69.71</del>
+        <div class="select">Add to cart
+    </div>
+</div>
+
+</div>
 </body>
+<head>
 </html>

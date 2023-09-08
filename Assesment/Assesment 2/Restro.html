@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .heading {
+            color: rgba(25, 58, 95, 1);
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: chocolate;
+            padding: 1%;
+        }
+
+        .booking_type {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .user_name {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .mobile_number {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .email {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .no_of_person {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .date {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .time {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .slot-a {
+            font-size: 20px;
+            font-weight: 600;
+            color: mediumvioletred;
+
+        }
+
+        .btn {
+            padding: 10px 30px;
+            font-weight: 600;
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="heading">Restaurant Booking Form</h1>
+    <form>
+
+        <label for="booking_type" class="booking_type">Choice of Booking:</label>
+        <select id="booking_type">
+            <option value="select">-- select --</option>
+            <option value="full_day">Full day booking</option>
+            <option value="half_day">Half day booking</option>
+            <option value="hourly">Hourly booking</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="user_name" class="user_name">User Name:</label>
+        <input type="text" id="user_name">
+        <br>
+        <br>
+
+        <label for="mobile_number" class="mobile_number">Mobile Number:</label>
+        <input type="text" id="mobile_number">
+        <br>
+        <br>
+
+        <label for="email" class="email">Email:</label>
+        <input type="email" id="email">
+        <br>
+        <br>
+
+        <label for="no_of_person" class="no_of_person">No of Person:</label>
+        <input type="number" id="no_of_person">
+        <br>
+        <br>
+
+        <label for="date" class="date">Date:</label>
+        <input type="date" id="date">
+        <br>
+        <br>
+
+        <label for="time" class="time">Time:</label>
+        <input type="time" id="time">
+        <br>
+        <br>
+
+        <label for="slot" class="slot-a">Slot:</label>
+        <select id="slot">
+            <option value="select">-- select --</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+        </select>
+        <br>
+        <br>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $("#booking_type").change(function () {
+                var booking_type = $(this).val();
+                if (booking_type == "full_day") {
+                    $("#date").show();
+                    $("#time").hide();
+                    $(".time").hide();
+                    $("#slot").hide();
+                    $(".slot-a").hide();
+                } else if (booking_type == "half_day") {
+                    $("#date").show();
+                    $("#slot").show();
+                    $(".slot-a").show();
+                } else if (booking_type == "hourly") {
+                    $("#date").show();
+                    $("#time").show();
+                    $("#slot").hide();
+                    $(".slot-a").hide();
+                }
+            });
+        });
+        document.getElementById("").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            console.log("Form submitted!");
+        });
+    </script>
+</body>
+
+</html>

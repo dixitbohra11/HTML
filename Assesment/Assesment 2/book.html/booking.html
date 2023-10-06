@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/book.html/favicon.png">
+   <link rel="stylesheet" href="/book.html/booking.css">
+</head>
+<body>
+    <center>
+        <h2>Registration Form</h2>
+    </center>
+   <div class="main">
+    <form action="post">
+        <div class="part">
+            <label for="">First Name:</label>
+            <input type="text" placeholder="Enter your first name" required pattern="[a-zA-Z]{3,6}" title="minimum 3 & max 6 alphabets..!">
+        </div>
+        <div class="part">
+            <label for="">Last Name:</label>
+            <input type="text" placeholder="Enter your Last name" required pattern="[a-zA-Z]{3,6}" title="minimum 3 & max 6 alphabets..!">
+        </div>
+        <div class="part">
+            <label for="">Email:</label>
+            <input type="email" name="email" placeholder="it should contain @.." required>
+        </div>
+        <div class="part">
+            <label for="">Mobile:</label>
+            <input type="text" name="mobile" placeholder="only 10 digits are allowed" required pattern="[0-9 9-0]" title="Only 10 Digits..!">
+        </div>
+        <div class="gender">
+                <label for="">Gender:</label>
+                <input type="radio" value="Male" name="gender" required>Male<input type="radio" value="Female"  name="gender" required>Female
+        </div>
+        <div class="part">
+            <label for="">Date Of Birth:</label>
+            <input type="date" name="dob" required>
+        </div>
+        <div class="part">
+            <label for="">Address:</label>
+            <textarea name="address" id="" cols="30" rows="5" required></textarea>
+        </div>
+        <div class="part">
+            <label for="">City:</label>
+            <input type="text" name="city" required>
+        </div>
+        <div class="part">
+            <label for="">Area PIN:</label>
+            <input type="text" name="areapin" required>
+        </div>
+        <div class="part">
+            <label for="">State:</label>
+            <input type="text" name="state" required>
+        </div>
+        <div class="part">
+            <label for="">Qualification:</label>
+            <select name="qualification" id="" required>
+                <option value="" hidden>Select Qualification</option>
+                <option value="">BE</option>
+                <option value="">B.Tech</option>
+                <option value="">BCA</option>
+                <option value="">BSC IT</option>
+            </select>
+        </div>
+        <div class="specialization">
+            <div class="speci"><label for="">Specialization:</label></div>
+         <div class="select" >
+            <input type="checkbox">Computer Science
+            <input type="checkbox">Information Technology
+            <input type="checkbox">Computer Architecture
+            <input type="checkbox">Tele Communication
+         </div>
+        </div>
+        <div class="part">
+            <label for="">Password:</label>
+            <input type="password" name="password" required title="min 5 & max8">
+        </div>
+        <button>Registered</button>
+    </form>
+   </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hide 
+        {
+            display: none;
+        }
+
+        .show 
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, adipisci quaerat saepe ipsum qui delectus laboriosam deleniti corrupti? Nisi maxime porro alias quia optio voluptas amet error beatae et dolore?
+    </p>
+
+    <button onclick=" hidePara()">Hide</button>
+    <button onclick="showPara()">Show</button>
+    <button ondblclick="hideShowPara()">Hide-Show</button>
+
+
+    <script>
+
+      
+
+        var p_tag  = document.getElementById('para');
+
+        console.log(p_tag);
+
+        // p_tag.style.display = "none";
+
+        function hidePara()
+        {
+            p_tag.style.display = "none";
+        }
+
+        function showPara()
+        {
+            p_tag.style.display = "block";
+        }
+
+        function hideShowPara()
+        {
+            // p_tag.style.display = "none";
+
+            // x =1;
+            // p_tag.style.display = "block";
+            // p_tag.style.display = "none";
+
+            // p_tag.classList.add('hide');
+            // p_tag.className = 'hide';
+            // p_tag.className = 'show';
+
+            if( p_tag.style.display == "none")// x == 1
+            {
+                // console.log(p_tag.style.display)
+                p_tag.style.display = "block"; // x=2
+            }
+            else 
+            {
+                // console.log(p_tag.style.display)
+                p_tag.style.display = "none"; // x=1
+            }
+        }
+       
+
+    </script>
+    
+</body>
+</html>

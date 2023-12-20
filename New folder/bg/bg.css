@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+.main
+{
+    position: relative;
+}
+
+.circle-dot-with-line {
+  position: absolute;
+  width: 20px; /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+  padding: 10px;
+}
+
+.circle-dot-with-line::before,
+.circle-dot-with-line::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  /* margin-top: 50px; Change the color as needed */
+  /* padding: 50px; */
+}
+
+.circle-dot-with-line::before {
+  width: 2px; /* Adjust the thickness of the line as needed */
+  height: 100%;
+  /* top: 50%; */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle-dot-with-line::after {
+  width: 12px; /* Adjust the size of the dot as needed */
+  height: 12px; /* Adjust the size of the dot as needed */
+  border-radius: 50%;
+  background-color: black; /* Change the color as needed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

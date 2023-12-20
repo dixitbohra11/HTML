@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+ <form action="">
+
+    Name: <input type="text" id="nm">
+        <span id="nmErr"></span>
+    <br><br>
+    Mobile : <input type="text" id="mb"><br><br>
+    Password: <input type="text"  id="pwd"><br><br>
+    Confirm Password: <input type="text"  id="cpwd"><br><br>
+
+    <input type="submit" onclick="return validateForm()">
+
+
+ </form>
+
+
+    <script>
+
+    //    var name = document.getElementById('nm');
+    //    console.log(name);
+
+    var name1 = document.getElementById('nm');
+
+    var nmSpan = document.getElementById('nmErr');
+
+  
+
+    var mobile = document.getElementById('mb');
+
+    var pass = document.getElementById('pwd');
+    var cpass = document.getElementById('cpwd');
+
+       console.log(name1);
+       console.log(name1.value);
+
+      function validateForm()
+      {
+        if(name1.value == "")
+        {
+            // alert('Name is Required...!');
+            // document.write("name is required..!")
+            nmSpan.innerHTML =" *Name is Required..!";
+            nmSpan.style.color = "red";6
+
+            return false;
+        }
+        else 
+        {
+            nmSpan.innerHTML =" ";
+        }
+
+        if(mobile.value == "")
+        {
+            alert('MobileNo is Required...!');
+            return false;
+            
+        }
+
+        if(pass.value == "")
+        {
+            alert('Password is Required...!');
+            return false;
+            
+        }
+
+        if(pass.value != cpass.value)
+        {
+            alert("Passwords do not match..!");
+            return false;
+        }
+      }
+       //alert('Name is Required...!');
+
+    </script>
+    
+</body>
+</html>

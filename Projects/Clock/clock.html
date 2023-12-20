@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            background: black;
+            height: 100vh;
+            width: 100%;
+           }
+.ff
+{
+    position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: red;
+            font-size: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace;
+       
+}
+    </style>
+</head>
+<body>
+
+    <div id="DigitalClock" class="ff"></div>
+
+    <script>
+            function test()
+            {
+                var date = new Date();
+                var h = date.getHours();
+                var m = date.getMinutes()
+                var s = date.getSeconds();
+                var secssion = "AM"
+                if(h==12)
+                {
+                    h=12
+                }
+                if(h>12)
+                {
+                    h=h-12;
+                    secssion = "PM"
+                }
+                h = (h<10)?"0"+h:h;
+                m = (m<10)?"0"+m:m;
+                s = (s<10)?"0"+s:s;
+
+                document.getElementById("DigitalClock").innerHTML = h + ":" + m  + ":" + s + " " + secssion;
+
+                setTimeout(test,1000);
+
+            }
+            test();
+
+    </script>
+    
+</body>
+</html>

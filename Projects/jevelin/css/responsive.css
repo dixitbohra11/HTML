@@ -1,0 +1,51 @@
+@media (max-width: 500px){
+    .container{
+        width: 100%;
+    }
+    .nav-line{
+        display: block;
+    }
+    /* .menubar-list {
+        display: grid;
+        grid-template-columns: 70fr 30fr;
+    } */
+    
+    .menu-bar{
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        color: #f84258;
+        padding-top: 5px;
+    }
+    .c{
+        display: none;
+    }
+   
+    .dropdown{
+        position: static;
+        width: 100%;
+    }
+    
+    .row{
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+    .other{
+        padding: 15px;
+    }
+    .rows{
+        display: block;
+    }
+    .box{
+        border-bottom: 1px solid;
+        padding: 10px;
+    }
+    .row-1{
+        display: block;
+    }
+    .cart{
+        text-align: center;
+        padding: 15px;
+    }
+}

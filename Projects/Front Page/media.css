@@ -1,0 +1,50 @@
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    body{
+        padding-left: 0;
+    }
+    .header{
+        left: -110%;
+    }
+   
+    .header.active{
+        left: 0%;
+        transition: .4s linear;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    .contact-me {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .mail,.phone,.address{
+        padding: 10px 0;
+        border-radius: 10px ;
+        box-shadow: 1px 1px 2px var(--black);
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .header{
+        width: 100%;
+        border-right: 0;
+    }
+    .contact-me {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .portfolio .box-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+   
+}

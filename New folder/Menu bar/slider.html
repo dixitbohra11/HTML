@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .card
+  {
+      width:360px ;
+      position: relative;
+  }
+  .img_main
+  {
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .a_img
+  {
+    position: absolute;
+    height: 100%;
+  }
+  .img_main:hover .imgs
+  {
+    background-position: contain;
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .black
+  {
+    height: 100%;
+    width:100%;
+    background-color: rgba(255,0,0,0.5);
+    position: absolute;
+    display: none;
+  } 
+  .img_main:hover .black
+  {
+   display: block;
+  }
+  .imgs
+  {
+    height: 100%;
+  }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="img_main">
+          <a class="a_img" href="">
+            <img class="imgs" src="/img/mechanic6-sectionbg2-1.jpg" alt=""></a>
+            <div class="black"></div> 
+        </div>
+        <!-- <div class="info">
+               <div class="comments">
+                <a href="">Themechampion</a>  / 
+                <a href="">Comments : 0</a>
+               </div>
+               <a href="">
+                <h3>The Surprising Reason College Tuition Is Crazy Expensive</h3>
+               </a>
+        </div> -->
+    </div>
+</body>
+</html>

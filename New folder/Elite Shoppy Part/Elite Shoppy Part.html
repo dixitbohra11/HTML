@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{box-sizing: border-box;}
+    .card
+    {
+        height: 500px;
+        width: 230px;
+        background: white;
+        position: relative;
+        margin: 100px auto;
+        box-shadow:0 0 25px #000 ;
+    }
+    .image
+    {
+        height: 350px;
+        width: 230px;
+       /* margin-left: 80%; */
+
+        /* background:url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg); */
+        /* background-size: 100% 100%; */
+    
+    }
+    b
+    {
+        background: orangered;
+        position: absolute;
+        top: 0px;
+        left: 196px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        z-index: 1;
+    }
+    
+    .front 
+    {
+        height: 350px;
+        width: 230px;
+        
+        position: absolute;
+        top:0;
+        left:0;
+        transition: 1s;
+        backface-visibility: hidden;
+        padding: 25px;
+        
+
+        transform: rotateY(0deg);
+    }
+
+    .back 
+    {
+        height: 350px;
+        width: 230px;
+        background:rgba(138, 134, 134,0.4);
+        position: absolute;
+        top:0;
+        left:0;
+        transition: 1s;
+        backface-visibility: hidden;
+        padding: 25px;
+
+        transform: rotateY(180deg);
+    }
+
+    .image:hover .front
+    {
+        transform: rotateY(180deg);
+    }
+
+    .image:hover .back
+    {
+        transform: rotateY(0deg);
+    }
+    .view
+    {
+     height: 50px;
+    width: 230px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    opacity: 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    }
+    .image:hover .view
+    {
+        margin-top: 300px;
+        opacity: 1;
+    }
+    .view:hover
+    {
+       background-color: blue;
+    }
+    .info
+    {
+        height: 150px;
+        width: 230px;
+        background-color: white;
+        font-size: 20px;
+        text-align: center;
+        padding: 10%;
+        color: palevioletred;
+        
+        
+    }
+    .select
+    {
+        height: 30px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        color: white;
+        outline: 5px solid transparent;
+        outline-offset: 0px;
+        transition: .30s;
+        margin: 30px auto;
+    }   
+    .select:hover
+    {
+        outline: 5px solid aquamarine;
+        outline-offset: 5px;
+    }
+    
+</style>
+<body>
+    <div class="card"><b>new</b>
+    <div class="image">
+        <div class="front">
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+
+        <div class="back">
+
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+        <div class="view">Quick view</div>
+</div>
+    <div class="info">Formal Blue Shirt
+       <span style="color: black;">$45.99</span>
+       <del style="color: gray;">$69.71</del>
+        <div class="select">Add to cart
+    </div>
+</div>
+
+</div>
+</body>
+<head>
+</html>
